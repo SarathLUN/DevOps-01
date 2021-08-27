@@ -38,6 +38,13 @@ docker/whalesay   latest        6b362a9f73eb   5 years ago         247MB
 >docker run -itd -p 80:80 --rm --name my-running-app my-golang-app
 325866d4181cf12a973703db5f86c1ffc52bdf42d99bba8302a798543664f192
 ```
+- check running processes:
+```shell
+>docker ps
+CONTAINER ID   IMAGE           COMMAND   CREATED         STATUS         PORTS                               NAMES
+77eefc4204b8   my-golang-app   "app"     4 seconds ago   Up 3 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   my-running-app
+```
+
 - Note: `--rm` will auto remove container after we stop it
 ```shell
 >telnet localhost 80
